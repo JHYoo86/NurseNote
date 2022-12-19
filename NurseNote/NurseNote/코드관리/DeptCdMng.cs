@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace NurseNote.코드관리
+namespace NurseNote
 {
     public partial class DeptCdMng : Form
     {
@@ -59,7 +59,7 @@ namespace NurseNote.코드관리
             clsDB.ExecuteNonQuery(SQL);
 
 
-            for (int i = 0; i < ssList_Sheet1.Rows.Count - 1; i++)
+            for (int i = 0; i < ssList_Sheet1.Rows.Count; i++)
             {
                 if (ssList_Sheet1.Cells[i, 0].Text != "")
                 {
@@ -82,7 +82,17 @@ namespace NurseNote.코드관리
 
         private void BtnDelete_Click(object sender, EventArgs e)
         {
+            string SQL = "";
+            int rowIdx = ssList_Sheet1.ActiveRowIndex;
 
+            if (rowIdx < 0) return;
+
+            SQL += "DELETE FROM BMEDDEPTCD ";
+            SQL += " WHERE MEDDEPTCD = '" + ssList_Sheet1.Cells[rowIdx, 0].Text + "'";
+
+            clsDB.ExecuteNonQuery(SQL);
+
+            BtnSearch.PerformClick();
         }
 
         private void BtnAdd_Click(object sender, EventArgs e)

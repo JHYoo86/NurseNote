@@ -1,5 +1,5 @@
 ﻿
-namespace NurseNote.코드관리
+namespace NurseNote
 {
     partial class DeptCdMng
     {
@@ -29,13 +29,12 @@ namespace NurseNote.코드관리
         /// </summary>
         private void InitializeComponent()
         {
-            FarPoint.Win.Spread.CellType.TextCellType textCellType3 = new FarPoint.Win.Spread.CellType.TextCellType();
-            FarPoint.Win.Spread.CellType.TextCellType textCellType4 = new FarPoint.Win.Spread.CellType.TextCellType();
+            FarPoint.Win.Spread.CellType.TextCellType textCellType5 = new FarPoint.Win.Spread.CellType.TextCellType();
+            FarPoint.Win.Spread.CellType.TextCellType textCellType6 = new FarPoint.Win.Spread.CellType.TextCellType();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.BtnDelete = new System.Windows.Forms.Button();
-            this.BtnExit = new System.Windows.Forms.Button();
             this.BtnSave = new System.Windows.Forms.Button();
             this.BtnSearch = new System.Windows.Forms.Button();
             this.ssList = new FarPoint.Win.Spread.FpSpread();
@@ -54,7 +53,7 @@ namespace NurseNote.코드관리
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1029, 23);
+            this.panel2.Size = new System.Drawing.Size(926, 23);
             this.panel2.TabIndex = 14;
             // 
             // label4
@@ -72,14 +71,13 @@ namespace NurseNote.코드관리
             // 
             this.panel1.Controls.Add(this.BtnAdd);
             this.panel1.Controls.Add(this.BtnDelete);
-            this.panel1.Controls.Add(this.BtnExit);
             this.panel1.Controls.Add(this.BtnSave);
             this.panel1.Controls.Add(this.BtnSearch);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 23);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1029, 46);
+            this.panel1.Size = new System.Drawing.Size(926, 46);
             this.panel1.TabIndex = 16;
             // 
             // BtnDelete
@@ -92,16 +90,6 @@ namespace NurseNote.코드관리
             this.BtnDelete.Text = "삭제";
             this.BtnDelete.UseVisualStyleBackColor = true;
             this.BtnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
-            // 
-            // BtnExit
-            // 
-            this.BtnExit.Location = new System.Drawing.Point(921, 4);
-            this.BtnExit.Margin = new System.Windows.Forms.Padding(4);
-            this.BtnExit.Name = "BtnExit";
-            this.BtnExit.Size = new System.Drawing.Size(104, 38);
-            this.BtnExit.TabIndex = 9;
-            this.BtnExit.Text = "닫기";
-            this.BtnExit.UseVisualStyleBackColor = true;
             // 
             // BtnSave
             // 
@@ -134,7 +122,7 @@ namespace NurseNote.코드관리
             this.ssList.Name = "ssList";
             this.ssList.Sheets.AddRange(new FarPoint.Win.Spread.SheetView[] {
             this.ssList_Sheet1});
-            this.ssList.Size = new System.Drawing.Size(1029, 568);
+            this.ssList.Size = new System.Drawing.Size(926, 568);
             this.ssList.TabIndex = 18;
             // 
             // ssList_Sheet1
@@ -148,12 +136,12 @@ namespace NurseNote.코드관리
             this.ssList_Sheet1.ColumnFooterSheetCornerStyle.NoteIndicatorColor = System.Drawing.Color.Red;
             this.ssList_Sheet1.ColumnHeader.Cells.Get(0, 0).Value = "코드";
             this.ssList_Sheet1.ColumnHeader.Cells.Get(0, 1).Value = "명칭";
-            this.ssList_Sheet1.Columns.Get(0).CellType = textCellType3;
+            this.ssList_Sheet1.Columns.Get(0).CellType = textCellType5;
             this.ssList_Sheet1.Columns.Get(0).HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Center;
             this.ssList_Sheet1.Columns.Get(0).Label = "코드";
             this.ssList_Sheet1.Columns.Get(0).VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
             this.ssList_Sheet1.Columns.Get(0).Width = 109F;
-            this.ssList_Sheet1.Columns.Get(1).CellType = textCellType4;
+            this.ssList_Sheet1.Columns.Get(1).CellType = textCellType6;
             this.ssList_Sheet1.Columns.Get(1).HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Center;
             this.ssList_Sheet1.Columns.Get(1).Label = "명칭";
             this.ssList_Sheet1.Columns.Get(1).VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
@@ -177,7 +165,7 @@ namespace NurseNote.코드관리
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1029, 637);
+            this.ClientSize = new System.Drawing.Size(926, 637);
             this.Controls.Add(this.ssList);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
@@ -200,7 +188,6 @@ namespace NurseNote.코드관리
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button BtnDelete;
-        private System.Windows.Forms.Button BtnExit;
         private System.Windows.Forms.Button BtnSave;
         private System.Windows.Forms.Button BtnSearch;
         private FarPoint.Win.Spread.FpSpread ssList;
