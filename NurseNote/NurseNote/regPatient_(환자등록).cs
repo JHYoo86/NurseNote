@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NurseNote.classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -33,15 +34,12 @@ namespace NurseNote
         private void BtnSearch_Click(object sender, EventArgs e)
         {
             int i = 0;
-            string SQL = "";
             DataTable dt = null;
             ssList_Sheet1.RowCount = 0;
 
             Cursor.Current = Cursors.WaitCursor;
 
-            SQL = "SELECT * FROM BPT";
-            dt = clsDB.GetDataTable(SQL);
-
+            dt = clsFunction.FindAll_BPT();
             if (dt == null)
             {
                 MessageBox.Show(new Form() { TopMost = true }, "조회중 문제가 발생했습니다");
@@ -66,6 +64,8 @@ namespace NurseNote
                 ssList_Sheet1.Cells[ssList_Sheet1.RowCount - 1, 2].Text = dt.Rows[i]["SSNO1"].ToString().Trim();
                 ssList_Sheet1.Cells[ssList_Sheet1.RowCount - 1, 3].Text = dt.Rows[i]["SSNO2"].ToString().Trim();
             }
+
+            Cursor.Current = Cursors.Default;
         }
 
         private void BtnSave_Click(object sender, EventArgs e)

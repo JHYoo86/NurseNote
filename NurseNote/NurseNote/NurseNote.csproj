@@ -72,11 +72,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="clsDB.cs" />
-    <Compile Include="DBManager.cs">
+    <Compile Include="classes\clsDB.cs" />
+    <Compile Include="classes\clsFunction.cs" />
+    <Compile Include="관리자\DBManager.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DBManager.Designer.cs">
+    <Compile Include="관리자\DBManager.Designer.cs">
       <DependentUpon>DBManager.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
@@ -105,7 +106,31 @@
     <Compile Include="regPatient_%28환자등록%29.Designer.cs">
       <DependentUpon>regPatient_%28환자등록%29.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="DBManager.resx">
+    <Compile Include="코드관리\DeptCdMng.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="코드관리\DeptCdMng.Designer.cs">
+      <DependentUpon>DeptCdMng.cs</DependentUpon>
+    </Compile>
+    <Compile Include="코드관리\DrCdMng.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="코드관리\DrCdMng.Designer.cs">
+      <DependentUpon>DrCdMng.cs</DependentUpon>
+    </Compile>
+    <Compile Include="코드관리\RoomCdMng.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="코드관리\RoomCdMng.Designer.cs">
+      <DependentUpon>RoomCdMng.cs</DependentUpon>
+    </Compile>
+    <Compile Include="코드관리\WardCdMng.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="코드관리\WardCdMng.Designer.cs">
+      <DependentUpon>WardCdMng.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="관리자\DBManager.resx">
       <DependentUpon>DBManager.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="main.resx">
@@ -126,6 +151,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="regPatient_%28환자등록%29.resx">
       <DependentUpon>regPatient_%28환자등록%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="코드관리\DeptCdMng.resx">
+      <DependentUpon>DeptCdMng.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="코드관리\DrCdMng.resx">
+      <DependentUpon>DrCdMng.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="코드관리\RoomCdMng.resx">
+      <DependentUpon>RoomCdMng.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="코드관리\WardCdMng.resx">
+      <DependentUpon>WardCdMng.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
