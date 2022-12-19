@@ -18,6 +18,11 @@ namespace NurseNote
             InitializeComponent();
         }
 
+        private void WardCdMng_Load(object sender, EventArgs e)
+        {
+            BtnSearch.PerformClick();
+        }
+
         private void BtnSearch_Click(object sender, EventArgs e)
         {
             int i = 0;
@@ -101,5 +106,6 @@ namespace NurseNote
         {
             ssList_Sheet1.RowCount = ssList_Sheet1.RowCount + 1;
         }
+
     }
 }

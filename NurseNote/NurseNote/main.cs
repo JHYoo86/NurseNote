@@ -42,7 +42,8 @@ namespace NurseNote
 
         private void 진료의코드관리ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            DrCdMng DrCdMngX = new DrCdMng();
+            DrCdMngX.ShowDialog();
         }
 
         private void 병동코드관리ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -53,7 +54,8 @@ namespace NurseNote
 
         private void 병실코드관리ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            RoomCdMng RoomCdMngX = new RoomCdMng();
+            RoomCdMngX.ShowDialog();
         }
     }
 }

@@ -9,13 +9,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace NurseNote.코드관리
+namespace NurseNote
 {
     public partial class DrCdMng : Form
     {
         public DrCdMng()
         {
             InitializeComponent();
+        }
+
+        private void DrCdMng_Load(object sender, EventArgs e)
+        {
+            BtnSearch.PerformClick();
         }
 
         private void BtnSearch_Click(object sender, EventArgs e)
@@ -88,9 +93,75 @@ namespace NurseNote.코드관리
 
                 ssList2_Sheet1.Cells[ssList2_Sheet1.RowCount - 1, 0].Text = dt.Rows[i]["MEDDRCD"].ToString().Trim();
                 ssList2_Sheet1.Cells[ssList2_Sheet1.RowCount - 1, 1].Text = dt.Rows[i]["MEDDRNAME"].ToString().Trim();
+                ssList2_Sheet1.Cells[ssList2_Sheet1.RowCount - 1, 2].Text = dt.Rows[i]["MEDDEPTCD"].ToString().Trim();
             }
 
             Cursor.Current = Cursors.Default;
+        }
+
+        private void BtnSave_Click(object sender, EventArgs e)
+        {
+            string SQL = "";
+            int rowIdx = ssList_Sheet1.ActiveRowIndex;
+
+            if (rowIdx < 0) return;
+
+            string strDeptCd = ssList_Sheet1.Cells[rowIdx, 0].Text;
+
+            SQL += "DELETE FROM BMEDDRCD ";
+            SQL += " WHERE MEDDEPTCD = '" + strDeptCd + "'";
+            clsDB.ExecuteNonQuery(SQL);
+
+
+            for (int i = 0; i < ssList2_Sheet1.Rows.Count; i++)
+            {
+                if (ssList2_Sheet1.Cells[i, 0].Text != "")
+                {
+                    SQL = "";
+                    SQL += "INSERT INTO BMEDDRCD                            ";
+                    SQL += "(                                               ";
+                    SQL += "      MEDDEPTCD                                 ";
+                    SQL += "    , MEDDRCD                                   ";
+                    SQL += "    , MEDDRNAME                                 ";
+                    SQL += ")                                               ";
+                    SQL += "VALUES                                          ";
+                    SQL += "(                                               ";
+                    SQL += "      '" + ssList2_Sheet1.Cells[i, 2].Text + "' ";
+                    SQL += "    , '" + ssList2_Sheet1.Cells[i, 0].Text + "' ";
+                    SQL += "    , '" + ssList2_Sheet1.Cells[i, 1].Text + "' ";
+                    SQL += ")                                               ";
+
+                    clsDB.ExecuteNonQuery(SQL);
+                }
+            }
+        }
+
+        private void BtnDelete_Click(object sender, EventArgs e)
+        {
+            string SQL = "";
+            int rowIdx = ssList2_Sheet1.ActiveRowIndex;
+
+            if (rowIdx < 0) return;
+
+            SQL += "DELETE FROM BMEDDRCD ";
+            SQL += " WHERE MEDDEPTCD = '" + ssList2_Sheet1.Cells[rowIdx, 2].Text + "'";
+            SQL += "   AND MEDDRCD = '" + ssList2_Sheet1.Cells[rowIdx, 0].Text + "'";
+
+            clsDB.ExecuteNonQuery(SQL);
+
+            BtnSearch.PerformClick();
+        }
+
+        private void BtnAdd_Click(object sender, EventArgs e)
+        {
+            int rowIdx = ssList_Sheet1.ActiveRowIndex;
+
+            if (rowIdx < 0) return;
+
+            string strDeptCd = ssList_Sheet1.Cells[rowIdx, 0].Text;
+
+            ssList2_Sheet1.RowCount = ssList2_Sheet1.RowCount + 1;
+            ssList2_Sheet1.Cells[ssList2_Sheet1.RowCount - 1, 2].Text = strDeptCd;
         }
     }
 }
