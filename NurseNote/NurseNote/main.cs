@@ -28,12 +28,6 @@ namespace NurseNote
             DBManagerX.ShowDialog();
         }
 
-        private void mnuRegPat_Click(object sender, EventArgs e)
-        {
-            regPatient regPatientX = new regPatient();
-            regPatientX.ShowDialog();
-        }
-
         private void 진료과코드관리ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DeptCdMng DeptCdMngX = new DeptCdMng();
@@ -57,5 +51,18 @@ namespace NurseNote
             RoomCdMng RoomCdMngX = new RoomCdMng();
             RoomCdMngX.ShowDialog();
         }
+
+        private void 병실등록ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            regInWard regInWardX = new regInWard();
+            regInWardX.ShowDialog();
+        }
+
+        private void mnuRegPat_Click(object sender, EventArgs e)
+        {
+            regPatient regPatientX = new regPatient();
+            regPatientX.ShowDialog();
+        }
+
     }
 }

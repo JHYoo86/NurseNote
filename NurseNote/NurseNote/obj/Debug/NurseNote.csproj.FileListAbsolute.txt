@@ -36,8 +36,6 @@ D:\99.소스관리\NurseNote\NurseNote\NurseNote\obj\Debug\NurseNote.regPatient.
 D:\99.소스관리\NurseNote\NurseNote\NurseNote\obj\Debug\NurseNote.exe.licenses
 D:\99.소스관리\NurseNote\NurseNote\NurseNote\obj\Debug\NurseNote.regInWard.resources
 D:\99.소스관리\NurseNote\NurseNote\NurseNote\obj\Debug\NurseNote.DeptCdMng.resources
-D:\99.소스관리\NurseNote\NurseNote\NurseNote\obj\Debug\NurseNote.코드관리.DrCdMng.resources
-D:\99.소스관리\NurseNote\NurseNote\NurseNote\obj\Debug\NurseNote.코드관리.RoomCdMng.resources
 D:\99.소스관리\NurseNote\NurseNote\NurseNote\obj\Debug\NurseNote.WardCdMng.resources
 D:\99. 소스관리\NurseNote\NurseNote\NurseNote\bin\Debug\NurseNote.exe.config
 D:\99. 소스관리\NurseNote\NurseNote\NurseNote\bin\Debug\NurseNote.exe
@@ -80,3 +78,5 @@ D:\99. 소스관리\NurseNote\NurseNote\NurseNote\obj\Debug\NurseNote.exe
 D:\99. 소스관리\NurseNote\NurseNote\NurseNote\obj\Debug\NurseNote.pdb
 D:\99. 소스관리\NurseNote\NurseNote\NurseNote\obj\Debug\NurseNote.DrCdMng.resources
 D:\99. 소스관리\NurseNote\NurseNote\NurseNote\obj\Debug\NurseNote.RoomCdMng.resources
+D:\99.소스관리\NurseNote\NurseNote\NurseNote\obj\Debug\NurseNote.DrCdMng.resources
+D:\99.소스관리\NurseNote\NurseNote\NurseNote\obj\Debug\NurseNote.RoomCdMng.resources

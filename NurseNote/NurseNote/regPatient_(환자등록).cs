@@ -102,5 +102,17 @@ namespace NurseNote
         {
             this.Close();
         }
+
+        private void ssList_SelectionChanged(object sender, FarPoint.Win.Spread.SelectionChangedEventArgs e)
+        {
+            int rowIdx = ssList_Sheet1.ActiveRowIndex;
+
+            if (rowIdx < 0) return;
+
+            TxtPTNO.Text = ssList_Sheet1.Cells[rowIdx, 0].Text;
+            TxtPTNAME.Text = ssList_Sheet1.Cells[rowIdx, 1].Text;
+            TxtSSNO1.Text = ssList_Sheet1.Cells[rowIdx, 2].Text;
+            TxtSSNO2.Text = ssList_Sheet1.Cells[rowIdx, 3].Text;
+        }
     }
 }
