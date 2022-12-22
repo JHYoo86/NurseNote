@@ -17,6 +17,12 @@ namespace NurseNote
             InitializeComponent();
         }
 
+        private void DBManager_Load(object sender, EventArgs e)
+        {
+            // 폼 타이틀
+            clsPublic.setFormTitle(this);
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             clsDB.createDB();
@@ -34,5 +40,6 @@ namespace NurseNote
         {
             clsDB.createTable();
         }
+
     }
 }

@@ -12,9 +12,45 @@ namespace NurseNote
 {
     public partial class main : Form
     {
+        regPatMemo regPatMemoX = null;
+
         public main()
         {
             InitializeComponent();
+        }
+
+        private void main_Load(object sender, EventArgs e)
+        {
+            // 폼 타이틀
+            clsPublic.setFormTitle(this);
+
+            // 메인폼 로드
+            regPatMemoX = new regPatMemo();
+            pSubFormToControl(regPatMemoX, panel1);
+        }
+
+        private void pSubFormToControl(Form frm, Control pControl)
+        {
+            frm.Owner = this;
+            frm.TopLevel = false;
+            this.Controls.Add(frm);
+            frm.Parent = pControl;
+            frm.Text = "";
+            frm.ControlBox = false;
+            frm.FormBorderStyle = FormBorderStyle.None;
+            frm.Top = 0;
+            frm.Left = 0;
+            frm.WindowState = FormWindowState.Normal;
+            frm.Height = pControl.Height;
+            frm.Width = pControl.Width;
+            //frm.Dock = DockStyle.Fill;
+            frm.Show();
+        }
+
+        private void pSubFormResize(Form frm, Control pControl)
+        {
+            frm.Height = pControl.Height;
+            frm.Width = pControl.Width;
         }
 
         private void mnuExit_Click(object sender, EventArgs e)
@@ -64,5 +100,9 @@ namespace NurseNote
             regPatientX.ShowDialog();
         }
 
+        private void main_Resize(object sender, EventArgs e)
+        {
+            pSubFormResize(regPatMemoX, panel1);
+        }
     }
 }

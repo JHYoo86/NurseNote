@@ -74,6 +74,13 @@
   <ItemGroup>
     <Compile Include="classes\clsDB.cs" />
     <Compile Include="classes\clsFunction.cs" />
+    <Compile Include="classes\clsPublic.cs" />
+    <Compile Include="regPatMemo_%28재원환자관리%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="regPatMemo_%28재원환자관리%29.Designer.cs">
+      <DependentUpon>regPatMemo_%28재원환자관리%29.cs</DependentUpon>
+    </Compile>
     <Compile Include="관리자\DBManager.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +137,9 @@
     <Compile Include="코드관리\WardCdMng.Designer.cs">
       <DependentUpon>WardCdMng.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="regPatMemo_%28재원환자관리%29.resx">
+      <DependentUpon>regPatMemo_%28재원환자관리%29.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="관리자\DBManager.resx">
       <DependentUpon>DBManager.cs</DependentUpon>
     </EmbeddedResource>

@@ -20,7 +20,12 @@ namespace NurseNote
 
         private void regInWard_Load(object sender, EventArgs e)
         {
+            // 폼 타이틀
+            clsPublic.setFormTitle(this);
+
+            // 병동 세팅
             setCboWARDCD();
+            // 진료과 세팅
             setCboMEDDEPTCD();
         }
 
@@ -36,6 +41,9 @@ namespace NurseNote
             DtpOPDATE.Value = DateTime.Now;
         }
 
+        /// <summary>
+        /// 병동 콤보박스 세팅
+        /// </summary>
         private void setCboWARDCD()
         {
             int i = 0;
@@ -67,7 +75,11 @@ namespace NurseNote
 
             Cursor.Current = Cursors.Default;
         }
-
+        
+        /// <summary>
+        /// 병실 콤보박스 세팅
+        /// </summary>
+        /// <param name="strWardCd"></param>
         private void setCboROOMCD(string strWardCd)
         {
             int i = 0;
@@ -100,6 +112,9 @@ namespace NurseNote
             Cursor.Current = Cursors.Default;
         }
 
+        /// <summary>
+        /// 진료과 콤보박스 세팅
+        /// </summary>
         private void setCboMEDDEPTCD()
         {
             int i = 0;
@@ -132,6 +147,10 @@ namespace NurseNote
             Cursor.Current = Cursors.Default;
         }
 
+        /// <summary>
+        /// 진료의 콤보박스 세팅
+        /// </summary>
+        /// <param name="strDeptCd"></param>
         private void setCboMEDDRCD(string strDeptCd)
         {
             int i = 0;

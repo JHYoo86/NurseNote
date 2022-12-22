@@ -20,6 +20,9 @@ namespace NurseNote
 
         private void WardCdMng_Load(object sender, EventArgs e)
         {
+            // 폼 타이틀
+            clsPublic.setFormTitle(this);
+
             BtnSearch.PerformClick();
         }
 

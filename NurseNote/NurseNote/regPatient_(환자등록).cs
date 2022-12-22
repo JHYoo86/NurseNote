@@ -20,7 +20,8 @@ namespace NurseNote
 
         private void regPatient_Load(object sender, EventArgs e)
         {
-
+            // 폼 타이틀
+            clsPublic.setFormTitle(this);
         }
 
         private void BtnClear_Click(object sender, EventArgs e)

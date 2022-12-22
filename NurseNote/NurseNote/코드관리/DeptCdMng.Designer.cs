@@ -40,10 +40,12 @@ namespace NurseNote
             this.BtnSearch = new System.Windows.Forms.Button();
             this.ssList = new FarPoint.Win.Spread.FpSpread();
             this.ssList_Sheet1 = new FarPoint.Win.Spread.SheetView();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ssList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ssList_Sheet1)).BeginInit();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -69,23 +71,21 @@ namespace NurseNote
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.BtnAdd);
-            this.panel1.Controls.Add(this.BtnDelete);
-            this.panel1.Controls.Add(this.BtnSave);
-            this.panel1.Controls.Add(this.BtnSearch);
+            this.panel1.Controls.Add(this.panel4);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 23);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(926, 46);
+            this.panel1.Size = new System.Drawing.Size(926, 40);
             this.panel1.TabIndex = 16;
             // 
             // BtnAdd
             // 
-            this.BtnAdd.Location = new System.Drawing.Point(505, 4);
+            this.BtnAdd.Dock = System.Windows.Forms.DockStyle.Right;
+            this.BtnAdd.Location = new System.Drawing.Point(128, 3);
             this.BtnAdd.Margin = new System.Windows.Forms.Padding(4);
             this.BtnAdd.Name = "BtnAdd";
-            this.BtnAdd.Size = new System.Drawing.Size(104, 38);
+            this.BtnAdd.Size = new System.Drawing.Size(104, 34);
             this.BtnAdd.TabIndex = 11;
             this.BtnAdd.Text = "추가";
             this.BtnAdd.UseVisualStyleBackColor = true;
@@ -93,10 +93,11 @@ namespace NurseNote
             // 
             // BtnDelete
             // 
-            this.BtnDelete.Location = new System.Drawing.Point(817, 4);
+            this.BtnDelete.Dock = System.Windows.Forms.DockStyle.Right;
+            this.BtnDelete.Location = new System.Drawing.Point(336, 3);
             this.BtnDelete.Margin = new System.Windows.Forms.Padding(4);
             this.BtnDelete.Name = "BtnDelete";
-            this.BtnDelete.Size = new System.Drawing.Size(104, 38);
+            this.BtnDelete.Size = new System.Drawing.Size(104, 34);
             this.BtnDelete.TabIndex = 10;
             this.BtnDelete.Text = "삭제";
             this.BtnDelete.UseVisualStyleBackColor = true;
@@ -104,10 +105,11 @@ namespace NurseNote
             // 
             // BtnSave
             // 
-            this.BtnSave.Location = new System.Drawing.Point(713, 4);
+            this.BtnSave.Dock = System.Windows.Forms.DockStyle.Right;
+            this.BtnSave.Location = new System.Drawing.Point(232, 3);
             this.BtnSave.Margin = new System.Windows.Forms.Padding(4);
             this.BtnSave.Name = "BtnSave";
-            this.BtnSave.Size = new System.Drawing.Size(104, 38);
+            this.BtnSave.Size = new System.Drawing.Size(104, 34);
             this.BtnSave.TabIndex = 8;
             this.BtnSave.Text = "저장";
             this.BtnSave.UseVisualStyleBackColor = true;
@@ -115,10 +117,11 @@ namespace NurseNote
             // 
             // BtnSearch
             // 
-            this.BtnSearch.Location = new System.Drawing.Point(609, 4);
+            this.BtnSearch.Dock = System.Windows.Forms.DockStyle.Right;
+            this.BtnSearch.Location = new System.Drawing.Point(24, 3);
             this.BtnSearch.Margin = new System.Windows.Forms.Padding(4);
             this.BtnSearch.Name = "BtnSearch";
-            this.BtnSearch.Size = new System.Drawing.Size(104, 38);
+            this.BtnSearch.Size = new System.Drawing.Size(104, 34);
             this.BtnSearch.TabIndex = 7;
             this.BtnSearch.Text = "조회";
             this.BtnSearch.UseVisualStyleBackColor = true;
@@ -128,12 +131,12 @@ namespace NurseNote
             // 
             this.ssList.AccessibleDescription = "";
             this.ssList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ssList.Location = new System.Drawing.Point(0, 69);
+            this.ssList.Location = new System.Drawing.Point(0, 63);
             this.ssList.Margin = new System.Windows.Forms.Padding(4);
             this.ssList.Name = "ssList";
             this.ssList.Sheets.AddRange(new FarPoint.Win.Spread.SheetView[] {
             this.ssList_Sheet1});
-            this.ssList.Size = new System.Drawing.Size(926, 568);
+            this.ssList.Size = new System.Drawing.Size(926, 574);
             this.ssList.TabIndex = 18;
             // 
             // ssList_Sheet1
@@ -159,6 +162,19 @@ namespace NurseNote
             this.ssList_Sheet1.RowHeader.Columns.Default.Resizable = false;
             this.ssList_Sheet1.ReferenceStyle = FarPoint.Win.Spread.Model.ReferenceStyle.A1;
             // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.BtnSearch);
+            this.panel4.Controls.Add(this.BtnAdd);
+            this.panel4.Controls.Add(this.BtnSave);
+            this.panel4.Controls.Add(this.BtnDelete);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel4.Location = new System.Drawing.Point(483, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Padding = new System.Windows.Forms.Padding(3);
+            this.panel4.Size = new System.Drawing.Size(443, 40);
+            this.panel4.TabIndex = 13;
+            // 
             // DeptCdMng
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -178,6 +194,7 @@ namespace NurseNote
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ssList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ssList_Sheet1)).EndInit();
+            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -193,5 +210,6 @@ namespace NurseNote
         private FarPoint.Win.Spread.FpSpread ssList;
         private FarPoint.Win.Spread.SheetView ssList_Sheet1;
         private System.Windows.Forms.Button BtnAdd;
+        private System.Windows.Forms.Panel panel4;
     }
 }

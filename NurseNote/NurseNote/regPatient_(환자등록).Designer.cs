@@ -29,10 +29,10 @@ namespace NurseNote
         /// </summary>
         private void InitializeComponent()
         {
-            FarPoint.Win.Spread.CellType.TextCellType textCellType1 = new FarPoint.Win.Spread.CellType.TextCellType();
-            FarPoint.Win.Spread.CellType.TextCellType textCellType2 = new FarPoint.Win.Spread.CellType.TextCellType();
-            FarPoint.Win.Spread.CellType.TextCellType textCellType3 = new FarPoint.Win.Spread.CellType.TextCellType();
-            FarPoint.Win.Spread.CellType.TextCellType textCellType4 = new FarPoint.Win.Spread.CellType.TextCellType();
+            FarPoint.Win.Spread.CellType.TextCellType textCellType5 = new FarPoint.Win.Spread.CellType.TextCellType();
+            FarPoint.Win.Spread.CellType.TextCellType textCellType6 = new FarPoint.Win.Spread.CellType.TextCellType();
+            FarPoint.Win.Spread.CellType.TextCellType textCellType7 = new FarPoint.Win.Spread.CellType.TextCellType();
+            FarPoint.Win.Spread.CellType.TextCellType textCellType8 = new FarPoint.Win.Spread.CellType.TextCellType();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.TxtPTNO = new System.Windows.Forms.TextBox();
@@ -42,35 +42,36 @@ namespace NurseNote
             this.TxtSSNO1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.TxtSSNO2 = new System.Windows.Forms.TextBox();
-            this.BtnClear = new System.Windows.Forms.Button();
-            this.BtnDelete = new System.Windows.Forms.Button();
-            this.BtnExit = new System.Windows.Forms.Button();
-            this.BtnSave = new System.Windows.Forms.Button();
-            this.BtnSearch = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.ssList = new FarPoint.Win.Spread.FpSpread();
             this.ssList_Sheet1 = new FarPoint.Win.Spread.SheetView();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.BtnSearch = new System.Windows.Forms.Button();
+            this.BtnSave = new System.Windows.Forms.Button();
+            this.BtnDelete = new System.Windows.Forms.Button();
+            this.BtnClear = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ssList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ssList_Sheet1)).BeginInit();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.groupBox1);
-            this.panel1.Controls.Add(this.BtnClear);
-            this.panel1.Controls.Add(this.BtnDelete);
-            this.panel1.Controls.Add(this.BtnExit);
-            this.panel1.Controls.Add(this.BtnSave);
-            this.panel1.Controls.Add(this.BtnSearch);
+            this.panel1.Controls.Add(this.panel5);
+            this.panel1.Controls.Add(this.panel4);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 23);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(919, 149);
+            this.panel1.Size = new System.Drawing.Size(919, 126);
             this.panel1.TabIndex = 1;
             // 
             // groupBox1
@@ -82,18 +83,18 @@ namespace NurseNote
             this.groupBox1.Controls.Add(this.TxtSSNO1);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.TxtSSNO2);
-            this.groupBox1.Location = new System.Drawing.Point(13, 50);
+            this.groupBox1.Location = new System.Drawing.Point(13, 7);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(896, 89);
+            this.groupBox1.Size = new System.Drawing.Size(896, 73);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "환자정보";
             // 
             // TxtPTNO
             // 
-            this.TxtPTNO.Location = new System.Drawing.Point(76, 37);
+            this.TxtPTNO.Location = new System.Drawing.Point(76, 33);
             this.TxtPTNO.Margin = new System.Windows.Forms.Padding(4);
             this.TxtPTNO.Name = "TxtPTNO";
             this.TxtPTNO.Size = new System.Drawing.Size(156, 25);
@@ -101,7 +102,7 @@ namespace NurseNote
             // 
             // TxtPTNAME
             // 
-            this.TxtPTNAME.Location = new System.Drawing.Point(327, 37);
+            this.TxtPTNAME.Location = new System.Drawing.Point(327, 33);
             this.TxtPTNAME.Margin = new System.Windows.Forms.Padding(4);
             this.TxtPTNAME.Name = "TxtPTNAME";
             this.TxtPTNAME.Size = new System.Drawing.Size(179, 25);
@@ -110,7 +111,7 @@ namespace NurseNote
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 42);
+            this.label1.Location = new System.Drawing.Point(8, 38);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(64, 17);
@@ -120,7 +121,7 @@ namespace NurseNote
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(258, 42);
+            this.label2.Location = new System.Drawing.Point(258, 38);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(64, 17);
@@ -129,7 +130,7 @@ namespace NurseNote
             // 
             // TxtSSNO1
             // 
-            this.TxtSSNO1.Location = new System.Drawing.Point(606, 37);
+            this.TxtSSNO1.Location = new System.Drawing.Point(606, 33);
             this.TxtSSNO1.Margin = new System.Windows.Forms.Padding(4);
             this.TxtSSNO1.Name = "TxtSSNO1";
             this.TxtSSNO1.Size = new System.Drawing.Size(124, 25);
@@ -138,7 +139,7 @@ namespace NurseNote
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(537, 42);
+            this.label3.Location = new System.Drawing.Point(537, 38);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(64, 17);
@@ -147,66 +148,11 @@ namespace NurseNote
             // 
             // TxtSSNO2
             // 
-            this.TxtSSNO2.Location = new System.Drawing.Point(730, 37);
+            this.TxtSSNO2.Location = new System.Drawing.Point(730, 33);
             this.TxtSSNO2.Margin = new System.Windows.Forms.Padding(4);
             this.TxtSSNO2.Name = "TxtSSNO2";
             this.TxtSSNO2.Size = new System.Drawing.Size(145, 25);
             this.TxtSSNO2.TabIndex = 6;
-            // 
-            // BtnClear
-            // 
-            this.BtnClear.Location = new System.Drawing.Point(389, 4);
-            this.BtnClear.Margin = new System.Windows.Forms.Padding(4);
-            this.BtnClear.Name = "BtnClear";
-            this.BtnClear.Size = new System.Drawing.Size(104, 38);
-            this.BtnClear.TabIndex = 11;
-            this.BtnClear.Text = "클리어";
-            this.BtnClear.UseVisualStyleBackColor = true;
-            this.BtnClear.Click += new System.EventHandler(this.BtnClear_Click);
-            // 
-            // BtnDelete
-            // 
-            this.BtnDelete.Location = new System.Drawing.Point(701, 4);
-            this.BtnDelete.Margin = new System.Windows.Forms.Padding(4);
-            this.BtnDelete.Name = "BtnDelete";
-            this.BtnDelete.Size = new System.Drawing.Size(104, 38);
-            this.BtnDelete.TabIndex = 10;
-            this.BtnDelete.Text = "삭제";
-            this.BtnDelete.UseVisualStyleBackColor = true;
-            this.BtnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
-            // 
-            // BtnExit
-            // 
-            this.BtnExit.Location = new System.Drawing.Point(805, 4);
-            this.BtnExit.Margin = new System.Windows.Forms.Padding(4);
-            this.BtnExit.Name = "BtnExit";
-            this.BtnExit.Size = new System.Drawing.Size(104, 38);
-            this.BtnExit.TabIndex = 9;
-            this.BtnExit.Text = "닫기";
-            this.BtnExit.UseVisualStyleBackColor = true;
-            this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
-            // 
-            // BtnSave
-            // 
-            this.BtnSave.Location = new System.Drawing.Point(597, 4);
-            this.BtnSave.Margin = new System.Windows.Forms.Padding(4);
-            this.BtnSave.Name = "BtnSave";
-            this.BtnSave.Size = new System.Drawing.Size(104, 38);
-            this.BtnSave.TabIndex = 8;
-            this.BtnSave.Text = "저장";
-            this.BtnSave.UseVisualStyleBackColor = true;
-            this.BtnSave.Click += new System.EventHandler(this.BtnSave_Click);
-            // 
-            // BtnSearch
-            // 
-            this.BtnSearch.Location = new System.Drawing.Point(493, 4);
-            this.BtnSearch.Margin = new System.Windows.Forms.Padding(4);
-            this.BtnSearch.Name = "BtnSearch";
-            this.BtnSearch.Size = new System.Drawing.Size(104, 38);
-            this.BtnSearch.TabIndex = 7;
-            this.BtnSearch.Text = "조회";
-            this.BtnSearch.UseVisualStyleBackColor = true;
-            this.BtnSearch.Click += new System.EventHandler(this.BtnSearch_Click);
             // 
             // panel2
             // 
@@ -233,12 +179,12 @@ namespace NurseNote
             // 
             this.ssList.AccessibleDescription = "";
             this.ssList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ssList.Location = new System.Drawing.Point(0, 172);
+            this.ssList.Location = new System.Drawing.Point(0, 149);
             this.ssList.Margin = new System.Windows.Forms.Padding(4);
             this.ssList.Name = "ssList";
             this.ssList.Sheets.AddRange(new FarPoint.Win.Spread.SheetView[] {
             this.ssList_Sheet1});
-            this.ssList.Size = new System.Drawing.Size(919, 743);
+            this.ssList.Size = new System.Drawing.Size(919, 766);
             this.ssList.TabIndex = 14;
             this.ssList.SelectionChanged += new FarPoint.Win.Spread.SelectionChangedEventHandler(this.ssList_SelectionChanged);
             // 
@@ -254,22 +200,22 @@ namespace NurseNote
             this.ssList_Sheet1.ColumnHeader.Cells.Get(0, 1).Value = "환자이름";
             this.ssList_Sheet1.ColumnHeader.Cells.Get(0, 2).Value = "주민번호1";
             this.ssList_Sheet1.ColumnHeader.Cells.Get(0, 3).Value = "주민번호2";
-            this.ssList_Sheet1.Columns.Get(0).CellType = textCellType1;
+            this.ssList_Sheet1.Columns.Get(0).CellType = textCellType5;
             this.ssList_Sheet1.Columns.Get(0).HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Center;
             this.ssList_Sheet1.Columns.Get(0).Label = "환자번호";
             this.ssList_Sheet1.Columns.Get(0).VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
             this.ssList_Sheet1.Columns.Get(0).Width = 109F;
-            this.ssList_Sheet1.Columns.Get(1).CellType = textCellType2;
+            this.ssList_Sheet1.Columns.Get(1).CellType = textCellType6;
             this.ssList_Sheet1.Columns.Get(1).HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Center;
             this.ssList_Sheet1.Columns.Get(1).Label = "환자이름";
             this.ssList_Sheet1.Columns.Get(1).VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
             this.ssList_Sheet1.Columns.Get(1).Width = 133F;
-            this.ssList_Sheet1.Columns.Get(2).CellType = textCellType3;
+            this.ssList_Sheet1.Columns.Get(2).CellType = textCellType7;
             this.ssList_Sheet1.Columns.Get(2).HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Center;
             this.ssList_Sheet1.Columns.Get(2).Label = "주민번호1";
             this.ssList_Sheet1.Columns.Get(2).VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
             this.ssList_Sheet1.Columns.Get(2).Width = 110F;
-            this.ssList_Sheet1.Columns.Get(3).CellType = textCellType4;
+            this.ssList_Sheet1.Columns.Get(3).CellType = textCellType8;
             this.ssList_Sheet1.Columns.Get(3).HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Center;
             this.ssList_Sheet1.Columns.Get(3).Label = "주민번호2";
             this.ssList_Sheet1.Columns.Get(3).VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
@@ -277,6 +223,85 @@ namespace NurseNote
             this.ssList_Sheet1.OperationMode = FarPoint.Win.Spread.OperationMode.ReadOnly;
             this.ssList_Sheet1.RowHeader.Columns.Default.Resizable = false;
             this.ssList_Sheet1.ReferenceStyle = FarPoint.Win.Spread.Model.ReferenceStyle.A1;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.BtnClear);
+            this.panel3.Controls.Add(this.BtnSearch);
+            this.panel3.Controls.Add(this.BtnSave);
+            this.panel3.Controls.Add(this.BtnDelete);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel3.Location = new System.Drawing.Point(481, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Padding = new System.Windows.Forms.Padding(3);
+            this.panel3.Size = new System.Drawing.Size(438, 40);
+            this.panel3.TabIndex = 14;
+            // 
+            // BtnSearch
+            // 
+            this.BtnSearch.Dock = System.Windows.Forms.DockStyle.Right;
+            this.BtnSearch.Location = new System.Drawing.Point(123, 3);
+            this.BtnSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnSearch.Name = "BtnSearch";
+            this.BtnSearch.Size = new System.Drawing.Size(104, 34);
+            this.BtnSearch.TabIndex = 7;
+            this.BtnSearch.Text = "조회";
+            this.BtnSearch.UseVisualStyleBackColor = true;
+            this.BtnSearch.Click += new System.EventHandler(this.BtnSearch_Click);
+            // 
+            // BtnSave
+            // 
+            this.BtnSave.Dock = System.Windows.Forms.DockStyle.Right;
+            this.BtnSave.Location = new System.Drawing.Point(227, 3);
+            this.BtnSave.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnSave.Name = "BtnSave";
+            this.BtnSave.Size = new System.Drawing.Size(104, 34);
+            this.BtnSave.TabIndex = 8;
+            this.BtnSave.Text = "저장";
+            this.BtnSave.UseVisualStyleBackColor = true;
+            this.BtnSave.Click += new System.EventHandler(this.BtnSave_Click);
+            // 
+            // BtnDelete
+            // 
+            this.BtnDelete.Dock = System.Windows.Forms.DockStyle.Right;
+            this.BtnDelete.Location = new System.Drawing.Point(331, 3);
+            this.BtnDelete.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnDelete.Name = "BtnDelete";
+            this.BtnDelete.Size = new System.Drawing.Size(104, 34);
+            this.BtnDelete.TabIndex = 10;
+            this.BtnDelete.Text = "삭제";
+            this.BtnDelete.UseVisualStyleBackColor = true;
+            this.BtnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
+            // 
+            // BtnClear
+            // 
+            this.BtnClear.Dock = System.Windows.Forms.DockStyle.Right;
+            this.BtnClear.Location = new System.Drawing.Point(19, 3);
+            this.BtnClear.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnClear.Name = "BtnClear";
+            this.BtnClear.Size = new System.Drawing.Size(104, 34);
+            this.BtnClear.TabIndex = 11;
+            this.BtnClear.Text = "클리어";
+            this.BtnClear.UseVisualStyleBackColor = true;
+            this.BtnClear.Click += new System.EventHandler(this.BtnClear_Click);
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.panel3);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(919, 40);
+            this.panel4.TabIndex = 15;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.groupBox1);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel5.Location = new System.Drawing.Point(0, 40);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(919, 86);
+            this.panel5.TabIndex = 16;
             // 
             // regPatient
             // 
@@ -299,17 +324,15 @@ namespace NurseNote
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ssList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ssList_Sheet1)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button BtnDelete;
-        private System.Windows.Forms.Button BtnExit;
-        private System.Windows.Forms.Button BtnSave;
-        private System.Windows.Forms.Button BtnSearch;
-        private System.Windows.Forms.Button BtnClear;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox TxtPTNO;
         private System.Windows.Forms.TextBox TxtPTNAME;
@@ -322,5 +345,12 @@ namespace NurseNote
         private System.Windows.Forms.Label label4;
         private FarPoint.Win.Spread.FpSpread ssList;
         private FarPoint.Win.Spread.SheetView ssList_Sheet1;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button BtnClear;
+        private System.Windows.Forms.Button BtnSearch;
+        private System.Windows.Forms.Button BtnSave;
+        private System.Windows.Forms.Button BtnDelete;
     }
 }

@@ -80,3 +80,4 @@ D:\99. 소스관리\NurseNote\NurseNote\NurseNote\obj\Debug\NurseNote.DrCdMng.re
 D:\99. 소스관리\NurseNote\NurseNote\NurseNote\obj\Debug\NurseNote.RoomCdMng.resources
 D:\99.소스관리\NurseNote\NurseNote\NurseNote\obj\Debug\NurseNote.DrCdMng.resources
 D:\99.소스관리\NurseNote\NurseNote\NurseNote\obj\Debug\NurseNote.RoomCdMng.resources
+D:\99.소스관리\NurseNote\NurseNote\NurseNote\obj\Debug\NurseNote.regPatMemo.resources

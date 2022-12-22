@@ -39,8 +39,8 @@ namespace NurseNote
             this.병동코드관리ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.병실코드관리ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuRegPat = new System.Windows.Forms.ToolStripMenuItem();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.병실등록ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,7 +53,8 @@ namespace NurseNote
             this.병실등록ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1163, 24);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 3, 0, 3);
+            this.menuStrip1.Size = new System.Drawing.Size(1050, 25);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -126,14 +127,6 @@ namespace NurseNote
             this.mnuRegPat.Text = "환자등록";
             this.mnuRegPat.Click += new System.EventHandler(this.mnuRegPat_Click);
             // 
-            // panel1
-            // 
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 24);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1163, 713);
-            this.panel1.TabIndex = 1;
-            // 
             // 병실등록ToolStripMenuItem
             // 
             this.병실등록ToolStripMenuItem.Name = "병실등록ToolStripMenuItem";
@@ -141,16 +134,29 @@ namespace NurseNote
             this.병실등록ToolStripMenuItem.Text = "병실등록";
             this.병실등록ToolStripMenuItem.Click += new System.EventHandler(this.병실등록ToolStripMenuItem_Click);
             // 
+            // panel1
+            // 
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 25);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1050, 624);
+            this.panel1.TabIndex = 1;
+            // 
             // main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1163, 737);
+            this.ClientSize = new System.Drawing.Size(1050, 649);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
+            this.Font = new System.Drawing.Font("나눔고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "main";
             this.Text = "main";
+            this.Load += new System.EventHandler(this.main_Load);
+            this.Resize += new System.EventHandler(this.main_Resize);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
