@@ -209,7 +209,68 @@ namespace NurseNote
 
         private void BtnSearch_Click(object sender, EventArgs e)
         {
+            int i = 0;
+            string SQL = "";
+            DataTable dt = null;
+            ssList_Sheet1.RowCount = 0;
 
+            Cursor.Current = Cursors.WaitCursor;
+
+            SQL = "";
+            SQL += "SELECT B.PTNO                       ";
+	        SQL += "     , B.PTNAME                     ";
+	        SQL += "     , W.FRDATE                     ";
+	        SQL += "     , W.ENDDATE                    ";
+	        SQL += "     , W.WARDCD                     ";
+	        SQL += "     , W.ROOMCD                     ";
+	        SQL += "     , W.OPDATE                     ";
+	        SQL += "     , W.MEDDEPTCD                  ";
+	        SQL += "     , D.MEDDEPTNAME                ";
+	        SQL += "     , W.MEDDRCD                    ";
+	        SQL += "     , U.MEDDRNAME                  ";
+            SQL += "  FROM BPT B                        ";
+            SQL += " LEFT OUTER JOIN INWARD W           ";
+            SQL += "    ON B.PTNO = W.PTNO              ";
+            SQL += " LEFT OUTER JOIN BMEDDEPTCD D       ";
+            SQL += "    ON W.MEDDEPTCD = D.MEDDEPTCD    ";
+            SQL += " LEFT OUTER JOIN BMEDDRCD U         ";
+            SQL += "    ON W.MEDDEPTCD = U.MEDDEPTCD    ";
+            SQL += "   AND W.MEDDRCD = U.MEDDRCD        ";
+
+            dt =  clsDB.GetDataTable(SQL);
+
+            if (dt == null)
+            {
+                MessageBox.Show(new Form() { TopMost = true }, "조회중 문제가 발생했습니다");
+                Cursor.Current = Cursors.Default;
+                return;
+            }
+
+            if (dt.Rows.Count == 0)
+            {
+                dt.Dispose();
+                dt = null;
+                Cursor.Current = Cursors.Default;
+                return;
+            }
+
+            for (i = 0; i < dt.Rows.Count; i++)
+            {
+                ssList_Sheet1.RowCount = ssList_Sheet1.RowCount + 1;
+
+                ssList_Sheet1.Cells[ssList_Sheet1.RowCount - 1, 0].Text = dt.Rows[i]["PTNO"].ToString().Trim();
+                ssList_Sheet1.Cells[ssList_Sheet1.RowCount - 1, 1].Text = dt.Rows[i]["PTNAME"].ToString().Trim();
+                ssList_Sheet1.Cells[ssList_Sheet1.RowCount - 1, 2].Text = dt.Rows[i]["FRDATE"].ToString().Trim();
+                ssList_Sheet1.Cells[ssList_Sheet1.RowCount - 1, 3].Text = dt.Rows[i]["OPDATE"].ToString().Trim();
+                ssList_Sheet1.Cells[ssList_Sheet1.RowCount - 1, 4].Text = dt.Rows[i]["WARDCD"].ToString().Trim();
+                ssList_Sheet1.Cells[ssList_Sheet1.RowCount - 1, 5].Text = dt.Rows[i]["ROOMCD"].ToString().Trim();
+                ssList_Sheet1.Cells[ssList_Sheet1.RowCount - 1, 6].Text = dt.Rows[i]["MEDDEPTCD"].ToString().Trim();
+                ssList_Sheet1.Cells[ssList_Sheet1.RowCount - 1, 7].Text = dt.Rows[i]["MEDDEPTNAME"].ToString().Trim();
+                ssList_Sheet1.Cells[ssList_Sheet1.RowCount - 1, 8].Text = dt.Rows[i]["MEDDRCD"].ToString().Trim();
+                ssList_Sheet1.Cells[ssList_Sheet1.RowCount - 1, 9].Text = dt.Rows[i]["MEDDRNAME"].ToString().Trim();
+            }
+
+            Cursor.Current = Cursors.Default;
         }
 
         private void BtnSave_Click(object sender, EventArgs e)
@@ -220,6 +281,28 @@ namespace NurseNote
         private void BtnDelete_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void ssList_SelectionChanged(object sender, FarPoint.Win.Spread.SelectionChangedEventArgs e)
+        {
+            int rowIdx = ssList_Sheet1.ActiveRowIndex;
+
+            if (rowIdx < 0) return;
+
+            TxtPTNO.Text = ssList_Sheet1.Cells[rowIdx, 0].Text;
+            TxtPTNAME.Text = ssList_Sheet1.Cells[rowIdx, 1].Text;
+            CboWARDCD.Text = ssList_Sheet1.Cells[rowIdx, 4].Text;
+            CboROOMCD.Text = ssList_Sheet1.Cells[rowIdx, 5].Text;
+            CboMEDDEPTCD.Text = ssList_Sheet1.Cells[rowIdx, 6].Text;
+            CboMEDDRCD.Text = ssList_Sheet1.Cells[rowIdx, 8].Text;
+            if (ssList_Sheet1.Cells[rowIdx, 2].Text != "")
+            {
+                DtpFRDATE.Value = Convert.ToDateTime(ssList_Sheet1.Cells[rowIdx, 2].Text);
+            }
+            if (ssList_Sheet1.Cells[rowIdx, 3].Text != "")
+            {
+                DtpOPDATE.Value = Convert.ToDateTime(ssList_Sheet1.Cells[rowIdx, 3].Text);
+            }
         }
     }
 }
